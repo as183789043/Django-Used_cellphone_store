@@ -35,7 +35,7 @@ pip install django-extensions
     'group_models': True,
   }
   ```
-### ADD this in settings.py > INSTALLED_APPS 
+### ADD  this in settings.py > INSTALLED_APPS 
 ```  python
 django_extensions
 ```
@@ -46,5 +46,5 @@ django_extensions
 python ./manage.py   graph_models  <application_name>  -a > my_project.dot
 ```
 
-### copy my_project.dot to this link
+### Copy my_project.dot content to this link
 [Graphviz_Online](https://dreampuf.github.io/GraphvizOnline/)
