@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} Rick二手機市集 {% endblock %}
+{% block content %}
+<div class="container center text_left div_margin index_height">
+    {% for p in products %}
+    {% if forloop.first %}
+    <table>
+        <tr style="background-color: #cccccc">
+            <td width="350">庫存手機</td>
+            <td width="350">廠牌/型號</td>
+            <td width="350">出廠年份</td>
+            <td class="price_right">價格</td>
+        </tr>
+    {% endif %}
+    <tr style="background-color: '{% cycle '#cccccc' '#ccffcc' %}'"></tr>
+    <td><a href="{% url 'detail-url' p.id%}"> {{ p.nickname }} </a></td>
+    <td> {{ p.pmodel.maker.name }}/{{ p.pmodel }} </td>
+    <td> {{ p.year }} </td>
+    <td class="price_right"> {{ p.price }} </td>
+    {% if forloop.last %}
+    </table>
+    {% endif %}
+    {% empty %}
+    <h3>目前沒有庫存的中古機可以賣，非常抱歉</h3>
+    {% endfor%}
+</div>
+{% endblock %}

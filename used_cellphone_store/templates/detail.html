@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} {{product.nickname | default:"找不到指定手機" }} {% endblock %}
+{% block content %}
+<div class="container center div_margin" style="height: 300px;">
+    {% if product %}
+    <table>
+        <tr>
+            <td>
+                <h3>{{product.nickname}}</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>{{product.description}}</td>
+        </tr>
+        <tr>
+            <td>西元{{product.year}}年出廠</td>
+        </tr>
+        <tr>
+            <td>售價:NT${{product.price}}元</td>
+        </tr>
+        {% for image in images%}
+        {% if forloop.first%}
+        <tr>
+            <td>
+                {% endif %}
+                <img src="{{image.url}}" width="350"><br>
+                {% if forloop.last%}
+            </td>
+        </tr>
+        {% endif %}
+        {% empty %}
+        <tr>
+            <td>暫無圖片</td>
+        </tr>
+        {% endfor%}
+    </table>
+    {% else%}
+    <h2>找不到圖片</h2>
+    {% endif %}
+
+</div>
+{% endblock%}
