@@ -46,5 +46,5 @@ django_extensions
 python ./manage.py   graph_models  <application_name>  -a > my_project.dot
 ```
 
-### copy my_project.dot content to this link
+### Copy my_project.dot content to this link
 [Graphviz_Online](https://dreampuf.github.io/GraphvizOnline/)
