@@ -17,6 +17,7 @@ python manage.py runserver
 ## Modify verbose_name and ordering(-price) 
 ![image](https://github.com/as183789043/Django-Used_cellphone_store/assets/56618553/929505b3-4560-495c-aaad-fcf062af9398)
 
+---
 
 ## ER Diagram
 ![image](https://github.com/as183789043/Django-Used_cellphone_store/assets/56618553/679e0227-73c7-4847-bf41-466211825923)
